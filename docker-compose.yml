@@ -1,0 +1,43 @@
+version: "3.8"
+
+services:
+ 
+       flakey:
+           network_mode: host
+           image: thetorproject/snowflake-proxy:latest
+           container_name: flakey
+           restart: unless-stopped
+           command: [ "-ephemeral-ports-range", "10000:20000" ]
+
+
+       snowy:
+           network_mode: host
+           image: thetorproject/snowflake-proxy:latest
+           container_name: snowy
+           restart: unless-stopped
+           command: [ "-ephemeral-ports-range", "20001:30000" ]
+
+
+       snowflakey:
+           network_mode: host
+           image: thetorproject/snowflake-proxy:latest
+           container_name: snowflakey
+           restart: unless-stopped
+           command: [ "-ephemeral-ports-range", "30001:40000" ]
+
+
+       flakeysnow:
+           network_mode: host
+           image: thetorproject/snowflake-proxy:latest
+           container_name: flakeysnow
+           restart: unless-stopped
+           command: [ "-ephemeral-ports-range", "40001:50000" ]
+
+       
+       flakeyflake:
+           network_mode: host
+           image: thetorproject/snowflake-proxy:latest
+           container_name: flakeyflake
+           restart: unless-stopped
+           command: [ "-ephemeral-ports-range", "50001:60000" ]
+
