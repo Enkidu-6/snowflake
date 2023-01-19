@@ -1,4 +1,4 @@
-# How to run a tor snowflake proxy
+# How to install docker and run a tor snowflake proxy
 If you want to run a snowflake proxy but don't know where to start or how to go about installing docker, docker compose and snowflake I've put together a few scripts to make it easy for you.
 
 All you need is a linux operating system and these scripts. They will remove any old versions if exist and install the newest versions of docker and docker compose on your system and you'll be ready to run a snowflake proxy in minutes. 
