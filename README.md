@@ -54,7 +54,7 @@ wget https://raw.githubusercontent.com/Enkidu-6/snowflake/main/docker-almalinux.
 
 **This script removes Podman as it's incompatible with docker.**
 
-**docker-compose.yml** is just a sample file that will allow you to run 5 snowflake proxies on your system simultanuosly. If you have 2 CPUs and about 3 GB of RAM you can easily run 5 proxies if not more. You can use this file or the official Tor project .yml file which will run one snowflake proxy.
+**docker-compose.yml** is just a sample file that will allow you to run 5 snowflake proxies on your system simultanuosly. If you have 2 CPUs and about 3 GB of RAM you can easily run 5 proxies if not more. You can use this file or [the official Tor project docker-compose.yml](https://gitlab.torproject.org/tpo/anti-censorship/docker-snowflake-proxy/raw/main/docker-compose.yml) which will run one snowflake proxy.
 
 ```
 wget https://raw.githubusercontent.com/Enkidu-6/snowflake/main/docker-compose.yml
