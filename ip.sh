@@ -8,6 +8,9 @@ then
 split -l 99 -d 1 ip/3
 else
 echo -e "\033[1;37mThe file is too large.\033[0m"
+/bin/rm -r -f 1
+/bin/rm -r ip
+exit;
 fi
 for i in `ls ip`;
 do
