@@ -12,5 +12,6 @@ docker -v
 docker compose version
 echo -e "\033[1;37m"
 echo "If you see a version number above, the installation was successful"
+echo "Starting snowflake ...."
 echo -e "\033[0m"
 docker compose up -d
