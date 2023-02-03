@@ -37,7 +37,7 @@ CentOS 7
 bash <(curl -s https://raw.githubusercontent.com/Enkidu-6/snowflake/main/docker-centos.sh)
 ```
 
-For Almalinux 8
+For Almalinux 8 & 9
 
 ```
 bash <(curl -s https://raw.githubusercontent.com/Enkidu-6/snowflake/main/docker-almalinux.sh)
