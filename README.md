@@ -5,17 +5,8 @@ All you need is a linux operating system and these scripts. They will remove any
 
 Download any of the scripts below according to your OS by opening the termial and typing:
 ```
-wget https://raw.githubusercontent.com/Enkidu-6/snowflake/main/script_name.sh
+bash <(curl -s https://raw.githubusercontent.com/Enkidu-6/snowflake/main/script_name.sh)
 ```
-then to make it executable type:
-```
-chmod 0700 script_name.sh
-```
-to run it type:
-```
-./script_name.sh
-```
-and then answer yes to a few prompts.
 
 ***You must either be root or use sudo to run them***
 
@@ -26,7 +17,7 @@ For:
 - Raspbian Buster 10 (oldstable)
 
 ```
-wget https://raw.githubusercontent.com/Enkidu-6/snowflake/main/docker-debian.sh
+bash <(curl -s https://raw.githubusercontent.com/Enkidu-6/snowflake/main/docker-debian.sh)
 ```
 
 For:
@@ -36,50 +27,30 @@ For:
 - Ubuntu Bionic 18.04 (LTS)
 
 ```
-wget https://raw.githubusercontent.com/Enkidu-6/snowflake/main/docker-ubuntu.sh
+bash <(curl -s https://raw.githubusercontent.com/Enkidu-6/snowflake/main/docker-ubuntu.sh)
 ```
 
 For:
 CentOS 7
 
 ```
-wget https://raw.githubusercontent.com/Enkidu-6/snowflake/main/docker-centos.sh
+bash <(curl -s https://raw.githubusercontent.com/Enkidu-6/snowflake/main/docker-centos.sh)
 ```
 
 For Almalinux 8
 
 ```
-wget https://raw.githubusercontent.com/Enkidu-6/snowflake/main/docker-almalinux.sh
+bash <(curl -s https://raw.githubusercontent.com/Enkidu-6/snowflake/main/docker-almalinux.sh)
 ```
 
-**This script removes Podman as it's incompatible with docker.**
+**This script removes Podman for Almalinux as it's incompatible with docker.**
 
 **docker-compose.yml** is just a sample file that will allow you to run 5 snowflake proxies on your system simultanuosly. If you have 2 CPUs and about 3 GB of RAM you can easily run 5 proxies if not more. You can use this file or [the official Tor project docker-compose.yml](https://gitlab.torproject.org/tpo/anti-censorship/docker-snowflake-proxy/raw/main/docker-compose.yml) which will run one snowflake proxy.
 
-```
-wget https://raw.githubusercontent.com/Enkidu-6/snowflake/main/docker-compose.yml
-```
-From the same directory type:
-
-```
-docker compose -d
-```
-or if you're running the old version of compose on Ubuntu.
-```
-docker-compose -d
-```
 
 Proxies with unrestricted NAT are most useful and will relay the most traffic. In order to run as unrestricted you must open ports in your firewall to allow traffic to a range of UDP ports. 
 
-Depending on the firewall you use these are just a couple of examples
-
-```
-firewall-cmd --permanent --add-port=10000-60000/udp
-```
-```
-ufw allow 10000:60000/udp
-```
-etc...
+The scripts will enable ufw on Debian and Ubunto and open UDP ports from 10000-60000. It does the same with firewall-cmd on CentOS and Almalinux. If you use a different firewall or you have an external firewall, you need to open the ports yourself.
 
 **You're done and you don't need to do anything else. The following scripts are just extra scripts I wrote to help maintain the setup or get additional information.**
 
