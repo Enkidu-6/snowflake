@@ -60,7 +60,7 @@ The scripts will enable ufw on Debian and Ubunto and open UDP ports from 10000-6
 
 Sometimes docker logs get large even if you set a size limit. Hunting them down and deleting them can be hard and time consuming. **delogs.sh** will simply empty the logs.
 
-
+# IP tracking
 **ip.sh** will search your conntrack table for current IP Addresses connected to you. It will sort and clean the list up and do a Geoip search. It will tell you how many IP addresses are connected to you and which countries they're coming from.
 
 In order to be able to run this script you need to have conntrack_nf on your system. If you type:
